@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@color/black"
@@ -7,54 +8,108 @@
     tools:context=".Proyecto.DisplayInfoFragment">
 
 
-    <TextView
-        android:id="@+id/tvInfoLogin"
-        android:layout_width="350dp"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEndh"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:layout_marginHorizontal="30dp"
-        android:gravity="center_horizontal"
-        android:text="@string/welcome"
-        android:textColor="@color/greysoft"
-        android:textSize="20sp" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="400dp" />
 
-    <EditText
-        android:id="@+id/etNameLg"
-        android:layout_width="350dp"
-        android:layout_height="58dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="200dp"
-        android:hint="Name and Surname"
-        android:textColorHint="@color/greysoft" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glEndv"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-    <TextView
-        android:id="@+id/tvInfoemail"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
-        android:layout_marginHorizontal="30dp"
-        android:gravity="center_horizontal"
-        android:text="@string/wmail"
-        android:textColor="@color/greysoft"
-        android:textSize="20sp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glstv"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-    <EditText
-        android:id="@+id/etEmailLg"
-        android:layout_width="350dp"
-        android:layout_height="59dp"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="350dp"
-        android:hint="email"
-        android:textColorHint="@color/greysoft" />
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginBottom="56dp"
         android:id="@+id/profile_image"
+        android:layout_marginEnd="4dp"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="450dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginBottom="506dp"
-        android:src="@drawable/_151495334" />
+        android:src="@drawable/_151495334"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/glEndh"
+        app:layout_constraintEnd_toStartOf="@id/glEndv" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:textColor="@color/greysoft"
+        android:text="@string/app_title"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:fontFamily="@font/bernier_shade_regular"
+        android:textSize="60sp"/>
+
+    <EditText
+        android:id="@+id/etWhatcher"
+        android:layout_width="263dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="24dp"
+        android:inputType="text"
+        android:gravity="center_horizontal"
+        android:hint="@string/label_user"
+        android:textColorHint="@color/greysoft"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/glEndv"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@id/glstv"
+        app:layout_constraintTop_toBottomOf="@+id/glEndh" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_marginTop="260dp"
+        android:hint="@string/label_register"
+        android:textSize="25sp"
+        android:textColorHint="#2C032E"
+        android:backgroundTint="@color/greysoft"
+        app:layout_constraintTop_toBottomOf="@+id/glEndh"
+        app:layout_constraintStart_toStartOf="@id/glstv"
+        app:layout_constraintEnd_toStartOf="@id/glEndv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="253dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="96dp"
+        android:inputType="textPassword"
+        android:gravity="center_horizontal"
+        android:hint="@string/label_password"
+        android:textColorHint="@color/greysoft"
+        app:circularflow_radiusInDP="5dp"
+        app:layout_constraintEnd_toStartOf="@id/glEndv"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="@id/glstv"
+        app:layout_constraintTop_toBottomOf="@+id/glEndh" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:backgroundTint="@color/purple"
+        android:text="@string/label_login"
+        android:textColor="#E91E63"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@id/glEndv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/glstv"
+        app:layout_constraintTop_toBottomOf="@+id/glEndh" />
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

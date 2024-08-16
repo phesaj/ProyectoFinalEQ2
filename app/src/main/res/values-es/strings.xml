@@ -4,7 +4,19 @@
     <string name="label_continue">Continuar</string>
     <string name="label_cancel">Cancelar</string>
     <string name="label_close">Cerrar</string>
+    <string name="label_createuser">Crear Usuario</string>
+
     <string name="generarte_un_perfil">Hello, enter your information to generate a profile</string>
+    <string name="app_title">birdwatching</string>
+    <string name="label_user">Observador</string>
+    <string name="label_name">Nombre</string>
+    <string name="label_surname">Apellido</string>
+
+    <string name="label_email">Correo Electronico</string>
+    <string name="label_password">Contraseña</string>
+    <string name="label_conpassword">Confirmar Contraseña</string>
+    <string name="label_login">Iniciar Sesion</string>
+    <string name="label_register">Registrar</string>
     <string name="welcome">bienvenido, Felices aventuras</string>
     <string name="wmail">Te enviaremos novedades a este correo !!</string>
     wmail

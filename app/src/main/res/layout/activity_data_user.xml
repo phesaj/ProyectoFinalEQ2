@@ -10,25 +10,99 @@
 
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glEndh"
+        android:id="@+id/glTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="150dp" />
+        app:layout_constraintGuide_begin="250dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glEndv"
+        android:id="@+id/glEnd"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="100dp"
+        app:layout_constraintGuide_end="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/glstv"
+        android:id="@+id/glStart"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="100dp"
+        app:layout_constraintGuide_begin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginBottom="26dp"
+        android:id="@+id/profile_image"
+        android:layout_marginEnd="4dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/_151495334"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/glTop"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        />
+
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_name"
+        style="@style/GreyTextStyle"
+        app:layout_constraintTop_toTopOf="@id/glTop"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvSurname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_surname"
+        style="@style/GreyTextStyle"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:layout_marginTop="16dp"/>
+
+    <!-- TextView para el usuario -->
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_user"
+        style="@style/GreyTextStyle"
+        app:layout_constraintTop_toBottomOf="@id/tvSurname"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_email"
+        style="@style/GreyTextStyle"
+        app:layout_constraintTop_toBottomOf="@id/tvUser"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:layout_marginTop="16dp"/>
+
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_password"
+        style="@style/GreyTextStyle"
+        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:layout_marginTop="16dp"
+        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

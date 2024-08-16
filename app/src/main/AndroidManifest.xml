@@ -28,7 +28,9 @@
         </activity>
         <activity
             android:name=".ejercicioclase.ejercicio2.fragment.params.ParamsActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".ejercicioclase.ejercicio2.fragment.FragmentActivity"
             android:exported="false" />

@@ -3,8 +3,18 @@
     <string name="label_continue">Continue</string>
     <string name="label_cancel">Cancel</string>
     <string name="label_close">Close</string>
+    <string name="label_createuser">Create User</string>
 
     <string name="generarte_un_perfil">Hello, enter your information to generate a profile</string>
+    <string name="app_title">birdwatching</string>
+    <string name="label_user">Whatcher</string>
+    <string name="label_name">Name</string>
+    <string name="label_surname">Surname</string>
+    <string name="label_email">E-Mail</string>
+    <string name="label_password">Password</string>
+    <string name="label_conpassword">Confirm Password</string>
+    <string name="label_login">Login</string>
+    <string name="label_register">Register</string>
     <string name="welcome">welcome, happy adventures</string>
     <string name="wmail">We will send you news to this email!!</string>
 
