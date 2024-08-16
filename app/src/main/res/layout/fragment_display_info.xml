@@ -43,8 +43,9 @@
         app:layout_constraintEnd_toStartOf="@id/glEndv" />
 
     <TextView
+        android:id="@+id/tvTitle"
         android:textColor="@color/greysoft"
-        android:text="birdwatching"
+        android:text="@string/app_title"
         android:gravity="center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/profile_image"
         android:layout_width="match_parent"
@@ -54,14 +55,15 @@
         android:textSize="60sp"/>
 
     <EditText
-        android:id="@+id/btWhatcher"
-
+        android:id="@+id/etWhatcher"
         android:layout_width="263dp"
         android:layout_height="53dp"
         android:layout_marginTop="24dp"
+        android:inputType="text"
         android:gravity="center_horizontal"
-        android:hint="Whatcher"
+        android:hint="@string/label_user"
         android:textColorHint="@color/greysoft"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@id/glEndv"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="@id/glstv"
@@ -70,7 +72,7 @@
     <Button
         android:id="@+id/btnRegistrar"
         android:layout_marginTop="260dp"
-        android:hint="Register"
+        android:hint="@string/label_register"
         android:textSize="25sp"
         android:textColorHint="#2C032E"
         android:backgroundTint="@color/greysoft"
@@ -81,12 +83,13 @@
         android:layout_height="wrap_content"/>
 
     <EditText
+        android:id="@+id/etPassword"
         android:layout_width="253dp"
         android:layout_height="49dp"
-
         android:layout_marginTop="96dp"
+        android:inputType="textPassword"
         android:gravity="center_horizontal"
-        android:hint="Password"
+        android:hint="@string/label_password"
         android:textColorHint="@color/greysoft"
         app:circularflow_radiusInDP="5dp"
         app:layout_constraintEnd_toStartOf="@id/glEndv"
@@ -95,11 +98,12 @@
         app:layout_constraintTop_toBottomOf="@+id/glEndh" />
 
     <Button
+        android:id="@+id/btnLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="184dp"
         android:backgroundTint="@color/purple"
-        android:text="login"
+        android:text="@string/label_login"
         android:textColor="#E91E63"
         android:textSize="25sp"
         app:layout_constraintEnd_toStartOf="@id/glEndv"
